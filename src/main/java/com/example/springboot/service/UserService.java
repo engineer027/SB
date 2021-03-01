@@ -5,9 +5,9 @@ import com.example.springboot.model.User;
 public interface UserService {
     User save(User user);
 
-    User findById(Long idUser);
+    User findById(Long id);
 
     User getUserByPhoneNumber(String phoneNumber);
 
-    void remote(Long idUser);
+    void remote(Long id);
 }
