@@ -7,5 +7,9 @@ import org.springframework.data.jpa.repository.Query;
 
 public interface UserRepository extends JpaRepository<User, Long> {
     @Query("SELECT u FROM User AS u JOIN FETCH u.roles WHERE u.phoneNumber = ?1")
-    Optional<User> findUsersByPhoneNumber(String phoneNumber);
+    Optional<User> getUserByPhoneNumber(String phoneNumber);
+
+    @Override
+    @Query("SELECT u FROM User AS u JOIN FETCH u.roles where u.id = ?1")
+    Optional<User> findById(Long id);
 }

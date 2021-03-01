@@ -7,7 +7,7 @@ public interface UserService {
 
     User findById(Long idUser);
 
-    User findByPhoneNumber(String phoneNumber);
+    User getUserByPhoneNumber(String phoneNumber);
 
     void remote(Long idUser);
 }

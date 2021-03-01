@@ -1,6 +1,7 @@
 package com.example.springboot.service;
 
 import com.example.springboot.model.Role;
+import com.example.springboot.model.RoleType;
 import com.example.springboot.repository.RoleRepository;
 import org.springframework.stereotype.Service;
 
@@ -13,8 +14,8 @@ public class RoleServiceImpl implements RoleService {
     }
 
     @Override
-    public Role getByName(String name) {
-        return roleRepository.findRoleByRoleName(name).get();
+    public Role getByName(RoleType roleType) {
+        return roleRepository.findRoleByRoleName(roleType).get();
     }
 
     @Override
