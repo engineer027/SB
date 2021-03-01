@@ -1,6 +1,5 @@
 package com.example.springboot;
 
-import com.example.springboot.service.UserService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

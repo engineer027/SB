@@ -9,5 +9,5 @@ public interface UserService {
 
     User getUserByPhoneNumber(String phoneNumber);
 
-    void remote(Long id);
+    void remove(Long id);
 }

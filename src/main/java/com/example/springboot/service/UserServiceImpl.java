@@ -28,7 +28,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void remote(Long id) {
+    public void remove(Long id) {
         userRepository.deleteById(id);
     }
 }
