@@ -30,7 +30,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Optional<User> findByPhoneNumber(String phoneNumber) {
-        return Optional.empty(); //TODO
+        return userRepository.findUsersByPhoneNumber(phoneNumber);
     }
 
     @Override
