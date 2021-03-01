@@ -2,7 +2,6 @@ package com.example.springboot.service;
 
 import com.example.springboot.model.User;
 import com.example.springboot.repository.UserRepository;
-import java.util.Optional;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -14,27 +13,22 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User create(User user) {
+    public User save(User user) {
         return userRepository.save(user);
     }
 
     @Override
-    public User update(User user) {
-        return userRepository.save(user);
+    public User findById(Long idUser) {
+        return userRepository.findById(idUser).get();
     }
 
     @Override
-    public Optional<User> findById(Long idUser) {
-        return userRepository.findById(idUser);
+    public User findByPhoneNumber(String phoneNumber) {
+        return userRepository.findUsersByPhoneNumber(phoneNumber).get();
     }
 
     @Override
-    public Optional<User> findByPhoneNumber(String phoneNumber) {
-        return userRepository.findUsersByPhoneNumber(phoneNumber);
-    }
-
-    @Override
-    public void remote(Long idUser) {
-        userRepository.deleteById(idUser);
+    public void remote(Long id) {
+        userRepository.deleteById(id);
     }
 }
